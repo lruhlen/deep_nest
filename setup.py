@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='deep_nest',
-      version='0.1',
+      version='0.11',
       description='A sane approach to arbitrarily nested dictionaries (*cough* nested JSON *cough*)',
       url='https://github.com/lruhlen/deep_nest',
       author='L. Ruhlen',
