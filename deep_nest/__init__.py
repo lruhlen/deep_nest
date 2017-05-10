@@ -1,1 +1,1 @@
-from ndict import deep_nest
+from deep_nest import deep_nest
