@@ -1,7 +1,7 @@
 from functools import reduce
 import operator
 
-class ndict(object):
+class deep_nest(object):
     def __init__(self, input_dict):
         self.__plain_dict = input_dict.copy()
 

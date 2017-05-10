@@ -1,7 +1,7 @@
 from unittest import TestCase, skip
-from ndict import ndict
+from deep_nest import deep_nest
 __author__ = 'L. Ruhlen'
-__project__ = 'ndict'
+__project__ = 'deep_nest'
 
 class TestNdict(TestCase):
     def setUp(self):
@@ -11,7 +11,7 @@ class TestNdict(TestCase):
                           },
                       3: {'A': 'value'}
                       }
-        self.test_dict = ndict(basic_dict)
+        self.test_dict = deep_nest(basic_dict)
 
     def test_get_item(self):
         tmp = self.test_dict[1, 'A']
