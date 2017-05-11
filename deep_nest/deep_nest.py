@@ -2,11 +2,14 @@ from functools import reduce
 import operator
 
 class deep_nest(object):
-    def __init__(self, input_dict):
+    def __init__(self, input_dict=dict()):
         self.__plain_dict = input_dict.copy()
 
-    def __query_nested_dict(self, dataDict, mapList):
-        return reduce(operator.getitem, mapList, dataDict)
+    def __query_nested_dict(self, dataDict, mapList=[]):
+        if mapList:
+            return reduce(operator.getitem, mapList, dataDict)
+        else:
+            return self.__plain_dict
 
     def __getitem__(self, keys):
         if type(keys) is not tuple: keys = (keys, )
@@ -42,3 +45,6 @@ class deep_nest(object):
 
     def __repr__(self):
         return str(self.__plain_dict)
+
+    def keys(self):
+        return self.__plain_dict.keys()
