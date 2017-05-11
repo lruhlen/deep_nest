@@ -1,5 +1,5 @@
 from unittest import TestCase, skip
-from deep_nest import deep_nest
+from deep_nest.deep_nest import deep_nest
 __author__ = 'L. Ruhlen'
 __project__ = 'deep_nest'
 
