@@ -47,5 +47,11 @@ class TestDeepNest(TestCase):
 
     def test_print_ndict(self):
         print(self.test_dict)
-        pass
 
+    def test_keys(self):
+        tmp = self.test_dict.keys()
+        self.assertEquals(tmp, set([1,2,3]))
+
+    def test_to_dict(self):
+        tmp = self.test_dict.to_dict()
+        self.assertIsInstance(tmp, dict)
