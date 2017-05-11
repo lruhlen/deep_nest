@@ -48,3 +48,6 @@ class deep_nest(object):
 
     def keys(self):
         return self.__plain_dict.keys()
+
+    def to_dict(self):
+        return self.__plain_dict
